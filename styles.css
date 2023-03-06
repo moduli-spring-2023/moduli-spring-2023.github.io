@@ -1,0 +1,143 @@
+* {
+  background: black;
+  color: white;
+}
+
+html, body {
+  font-family: -apple-system, Inter, Noto Sans, sans-serif;
+}
+
+.emscripten { padding-right: 0; margin-left: auto; margin-right: auto; display: block; }
+textarea.emscripten { font-family: monospace; width: 80%; }
+div.emscripten { text-align: center; }
+div.emscripten_border { border: 1px solid black; }
+
+.spinner {
+  height: 50px;
+  width: 50px;
+  margin: 0px auto;
+  -webkit-animation: rotation .8s linear infinite;
+  -moz-animation: rotation .8s linear infinite;
+  -o-animation: rotation .8s linear infinite;
+  animation: rotation 0.8s linear infinite;
+  border-left: 10px solid rgb(0,150,240);
+  border-right: 10px solid rgb(0,150,240);
+  border-bottom: 10px solid rgb(0,150,240);
+  border-top: 10px solid rgb(100,0,200);
+  border-radius: 100%;
+  background-color: rgb(200,100,250);
+}
+@-webkit-keyframes rotation {
+  from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes rotation {
+  from {-moz-transform: rotate(0deg);}
+  to {-moz-transform: rotate(360deg);}
+}
+@-o-keyframes rotation {
+  from {-o-transform: rotate(0deg);}
+  to {-o-transform: rotate(360deg);}
+}
+@keyframes rotation {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.main {
+  display: flex;
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  min-width: 10ch;
+}
+
+.argIn {
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+button {
+  margin: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10ch;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #303030;
+}
+
+textarea {
+  resize: none;
+}
+
+.loader {
+  display: none;
+  margin: auto;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #FFF;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.console {
+  width: 80vw;
+  height: 90vh;
+  overflow: scroll;
+  font-family: monospace;
+  margin-left: 2em;
+  margin-right: 2em;
+  border: 1px solid white;
+  padding: 1ch;
+  scroll-behavior: smooth;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 99vw;
+  text-align: center;
+}
+
+a {
+  color: #1dc135;
+}
+
+a:hover {
+  color: #22e53f;
+}
+
+.indent {
+  margin-left: 4ch;
+}
